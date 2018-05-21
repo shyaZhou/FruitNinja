@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class UIStart : UIBase {
     public GameObject spwaner;
-    private void Awake()
+    protected override void Awake()
     {
-        spwaner = GameObject.Find("GamePlay").transform.Find("Spawner").gameObject;
-        Debug.Log(spwaner);
+        base.Awake();
+        text.GetComponent<SpriteRenderer>().sprite = BeginManager.instance.startSprite;
+        //spwaner = GameObject.Find("GamePlay").transform.Find("Spawner").gameObject;
     }
     public UIStart() 
     {
-      
+
     }
     public override void OnCollisionEnter(Collision collision)
     {
         base.OnCollisionEnter(collision);
-        spwaner.SetActive(true);
+        StartCoroutine("WaitSeconds");
+        GameManager.instance.StartGame();
     }
-
-
+    IEnumerator WaitSeconds()
+    {
+        yield return new WaitForSeconds(7.0f);
+    }
 }

@@ -14,6 +14,8 @@ public class BeginManager : MonoBehaviour {
     public List<GameObject> rotateObjectList=new List<GameObject>();
     public List<UIBase> uiBaseList = new List<UIBase>();
     public float rotateSpeed=20f;
+    public Sprite startSprite;
+    public Sprite exitSprite;
     private void Awake()
     {
         if (instance==null)
@@ -37,7 +39,7 @@ public class BeginManager : MonoBehaviour {
         mode1Prefab = _fruitPrefab[0];
         mode2Prefab = _fruitPrefab[1];
         CreateUI<UIStart>("UIStart", mode1Prefab, "Start", Vector3.zero);
-        CreateUI<UIQuit>("UIQuit", mode2Prefab, "Quit", new Vector3(1, 0, 0));
+        CreateUI<UIExit>("UIExit", mode2Prefab, "Exit", new Vector3(1, 0, 0));
     }
     private void OnDestroy()
     {
@@ -83,6 +85,13 @@ public class BeginManager : MonoBehaviour {
         GameObject _border = Instantiate(board) as GameObject;
         _border.transform.parent = parentOb.transform;
         _border.transform.localPosition = Vector3.zero;
+        //文字
+        GameObject text = new GameObject("text");
+        text.AddComponent<SpriteRenderer>();
+        text.transform.parent = parentOb.transform;
+        text.transform.localPosition = Vector3.zero;
+        text.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+        text.transform.Rotate(transform.up, 180f);
         //旋转的物体
         rotateObjectList.Add(Instantiate(UIObject));
         rotateObjectList[rotateObjectList.Count - 1].tag = "UI";
@@ -94,6 +103,15 @@ public class BeginManager : MonoBehaviour {
         uiTemp.index = rotateObjectList.Count - 1;
         uiTemp.uiType=(UIBase.UIType)Enum.Parse(typeof(UIBase.UIType),typeName);
         uiTemp.owner = rotateObjectList[rotateObjectList.Count - 1];
+    }
+    public void DestroyUIAll()
+    {
+        for (int i = 0; i < rotateObjectList.Count; i++)
+        {
+            Destroy(rotateObjectList[i].transform.parent.gameObject,1f);
+        }
+        rotateObjectList.Clear();
+        uiBaseList.Clear();
     }
     void ShowDeBug()
     {

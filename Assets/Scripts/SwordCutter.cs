@@ -48,19 +48,34 @@ public class SwordCutter : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        GameObject victim = collision.collider.gameObject;
-
-        GameObject[] pieces = BLINDED_AM_ME.MeshCut.Cut(victim, transform.position, transform.right, capMaterial);
-
-        if (!pieces[1].GetComponent<Rigidbody>())
+        if (collision.gameObject.GetComponent<Fruit>() != null)
         {
-            pieces[1].AddComponent<Rigidbody>();
-            MeshCollider temp= pieces[1].AddComponent<MeshCollider>();
-            temp.convex = true;
-        }
-        StartCoroutine(LongVibration(.2f,.2f));
-        //Destroy(pieces[1], 1);
+            AudioSource audio = collision.gameObject.GetComponent<AudioSource>();
+            audio.Play();
+            ParticleSystem ps = collision.transform.Find("FX").GetComponent<ParticleSystem>();
+            ps.Play();
+            GameObject victim = collision.collider.gameObject;
 
+            GameObject[] pieces = BLINDED_AM_ME.MeshCut.Cut(victim, transform.position, transform.right, capMaterial);
+
+            //if (!pieces[1].GetComponent<Rigidbody>())
+            //{
+            //    pieces[1].AddComponent<Rigidbody>();
+            //    MeshCollider temp = pieces[1].AddComponent<MeshCollider>();
+            //    temp.convex = true;
+            //}
+            if (!pieces[1].GetComponent<Rigidbody>())
+            {
+                pieces[1].AddComponent<Rigidbody>();
+            }
+            foreach (var item in pieces)
+            {
+                Destroy(item.GetComponent<MeshCollider>());
+                Destroy(item,3f);
+            }
+            StartCoroutine(LongVibration(.2f, .2f));
+            //Destroy(pieces[1], 1);
+        }
     }
 
     //SteamVR_Controller.Input([the index of the controller you want to vibrate]).TriggerHapticPulse([length in microseconds as ushort]);
