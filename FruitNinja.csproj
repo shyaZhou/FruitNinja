@@ -343,6 +343,7 @@
     <Compile Include="Assets\Obi\Scripts\Utils\ObiProfiler.cs" />
     <Compile Include="Assets\Obi\Scripts\Utils\ObiUtils.cs" />
     <Compile Include="Assets\Scripts\BeginManager.cs" />
+    <Compile Include="Assets\Scripts\CubeTest.cs" />
     <Compile Include="Assets\Scripts\Fruit.cs" />
     <Compile Include="Assets\Scripts\FruitSpwaner.cs" />
     <Compile Include="Assets\Scripts\Leftss.cs" />

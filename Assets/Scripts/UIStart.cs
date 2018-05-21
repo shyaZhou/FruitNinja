@@ -14,11 +14,23 @@ public class UIStart : UIBase {
     {
 
     }
-    public override void OnCollisionEnter(Collision collision)
+    //public override void OnCollisionEnter(Collision collision)
+    //{
+    //    base.OnCollisionEnter(collision);
+    //    if (collision.collider.tag == "Weapon")
+    //    {
+    //    StartCoroutine("WaitSeconds");
+    //    GameManager.instance.StartGame(100);
+    //    }
+    //}
+    public override void OnTriggerEnter(Collider other)
     {
-        base.OnCollisionEnter(collision);
-        StartCoroutine("WaitSeconds");
-        GameManager.instance.StartGame(3);
+        base.OnTriggerEnter(other);
+        if (other.tag == "Weapon")
+        {
+            StartCoroutine("WaitSeconds");
+            GameManager.instance.StartGame(100);
+        }
     }
     IEnumerator WaitSeconds()
     {

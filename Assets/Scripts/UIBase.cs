@@ -12,26 +12,30 @@ public class UIBase:MonoBehaviour  {
     public int index;
     public UIType uiType;
     public GameObject owner;
-    public virtual void OnCollisionEnter(Collision collision)
+    //public virtual void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.collider.tag == "Weapon")
+    //    {
+    //        //Debug.Log("Weapon Collider!");
+    //        //BeginManager.instance.rotateObjectList.RemoveAt(index);
+    //        //for (int i = index; i < BeginManager.instance.rotateObjectList.Count; i++)
+    //        //{
+    //        //    //让大于本index的UIBase中的index-1
+    //        //    BeginManager.instance.uiBaseList[index+1].index--;
+    //        //}
+    //        //BeginManager.instance.uiBaseList.Remove(this);
+    //        //Destroy(this.transform.parent.gameObject, 1f);
+    //        Debug.Log("collider:" + collision.collider.tag);
+    //        BeginManager.instance.DestroyUIAll();
+    //        //BeginManager.instance.HideUIAll();
+    //    }
+    //}
+    public virtual void OnTriggerEnter(Collider other)
     {
-        if (collision.collider.tag == "Weapon")
+        if (other.tag == "Weapon")
         {
-            //Debug.Log("Weapon Collider!");
-            //BeginManager.instance.rotateObjectList.RemoveAt(index);
-            //for (int i = index; i < BeginManager.instance.rotateObjectList.Count; i++)
-            //{
-            //    //让大于本index的UIBase中的index-1
-            //    BeginManager.instance.uiBaseList[index+1].index--;
-            //}
-            //BeginManager.instance.uiBaseList.Remove(this);
-            //Destroy(this.transform.parent.gameObject, 1f);
-
             BeginManager.instance.DestroyUIAll();
-            //BeginManager.instance.HideUIAll();
         }
-
-
-
     }
     protected virtual void Awake()
     {

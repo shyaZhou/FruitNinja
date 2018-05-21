@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 64999782135387042}
   - component: {fileID: 114088992180206338}
   - component: {fileID: 82475362789373212}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pineapple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 4226717663267202}
   - component: {fileID: 198627742053799212}
   - component: {fileID: 199913690579018394}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BloodGlobs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 4597026262938526}
   - component: {fileID: 198558382134248448}
   - component: {fileID: 199442403022801004}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!64 &64999782135387042
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -329,7 +329,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1256277263
+  randomSeed: 1370766348
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3481,7 +3481,7 @@ ParticleSystem:
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 0
   useRigidbodyForVelocity: 1

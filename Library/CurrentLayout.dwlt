@@ -71,7 +71,7 @@ MonoBehaviour:
   m_MinSize: {x: 787, y: 492}
   m_MaxSize: {x: 16012, y: 14042}
   vertical: 0
-  controlID: 122
+  controlID: 63
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -116,8 +116,8 @@ MonoBehaviour:
     y: 0
     width: 235
     height: 573
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -170,7 +170,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &8
 MonoBehaviour:
@@ -236,7 +236,7 @@ MonoBehaviour:
   m_MinSize: {x: 510, y: 492}
   m_MaxSize: {x: 12010, y: 14042}
   vertical: 1
-  controlID: 123
+  controlID: 64
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_MinSize: {x: 510, y: 221}
   m_MaxSize: {x: 12010, y: 4021}
   vertical: 0
-  controlID: 124
+  controlID: 112
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -280,8 +280,8 @@ MonoBehaviour:
     y: 0
     width: 713
     height: 573
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -482,19 +482,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Resources/FruitPrefab
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Resources/FruitPrefab
   m_LastFoldersGridSize: 16
   m_LastProjectPath: F:\ZhouShaoYang\Git\GitHub\FruitNinja
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 128}
-    m_SelectedIDs: ee300000
-    m_LastClickedID: 12526
-    m_ExpandedIDs: 00000000c8290000da290000042b00009e2d0000702e0000d02f0000ee30000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 416}
+    m_SelectedIDs: 282a0000
+    m_LastClickedID: 10792
+    m_ExpandedIDs: 00000000c8290000da290000042b0000a02d0000722e0000d22f0000f030000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -522,7 +522,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c8290000da290000042b00009e2d0000702e0000d02f0000ee300000
+    m_ExpandedIDs: 00000000c8290000da290000042b0000a02d0000722e0000d22f0000f0300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -553,15 +553,15 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 9c2a00007a2d0000482e00008a2b0000242c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: BeginManager
-      m_OriginalName: BeginManager
+      m_Name: Resources
+      m_OriginalName: Resources
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 2064
+      m_UserData: 10714
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -606,7 +606,7 @@ MonoBehaviour:
   m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
-    m_CachedPref: 275
+    m_CachedPref: 129
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
@@ -637,10 +637,10 @@ MonoBehaviour:
     width: 233
     height: 552
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 41}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 9ee5feff8415ffffbe15ffffdc2fffff1630ffffa6fbffff0000000096320000
+    m_ExpandedIDs: c2eaefff965df3ffae5df3ff7ca0f5ffb6a0f5ffcef8f6ff2420f8ffde78f9ffe078f9ff0079f9ff0279f9ff2279f9ff2479f9ff6679f9ff6879f9ff069df9ff169df9ff2e9df9ff689df9ffd8b9f9fff0b9f9ff5669faffe007fbff5a71fdffbc47ffffe247ffffe447ffff1848ffff5048ffff8656ffffb056ffffb0b1ffff56fbffffa6fbffff00000000923200000a330000fc340000e2490000d24c0000d84c00004a4d0000384f0000e04f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -690,14 +690,14 @@ MonoBehaviour:
     width: 709
     height: 552
   m_SceneLighting: 1
-  lastFramingTime: 2456.753910454219
+  lastFramingTime: 7399.444638280355
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 4.31, y: 3.7, z: 6.97}
+    m_Target: {x: -1.7473944, y: -1.8596792, z: 9.006788}
     speed: 2
-    m_Value: {x: 4.31, y: 3.7, z: 6.97}
+    m_Value: {x: -1.7473944, y: -1.8596792, z: 9.006788}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -720,13 +720,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.003954437, y: 0.9906634, z: -0.13305414, w: -0.02944334}
+    m_Target: {x: 0.08822117, y: -0.8985312, z: 0.3740948, w: 0.21192402}
     speed: 2
-    m_Value: {x: -0.0039544376, y: 0.99066347, z: -0.13305415, w: -0.029443342}
+    m_Value: {x: 0.08822117, y: -0.8985312, z: 0.3740948, w: 0.21192402}
   m_Size:
-    m_Target: 2.6161287
+    m_Target: 12.84296
     speed: 2
-    m_Value: 2.6161287
+    m_Value: 12.84296
   m_Ortho:
     m_Target: 0
     speed: 2
