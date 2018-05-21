@@ -1009,13 +1009,13 @@
     </member>
     <member name="M:UnityEngine.Animator.GetCurrentAnimatorClipInfo(System.Int32)">
       <summary>
-        <para>Access the current Animation clip’s information from the Animator.</para>
+        <para>See IAnimatorControllerPlayable.GetCurrentAnimatorClipInfo.</para>
       </summary>
       <param name="layerIndex"></param>
     </member>
     <member name="M:UnityEngine.Animator.GetCurrentAnimatorClipInfo(System.Int32,System.Collections.Generic.List`1&lt;UnityEngine.AnimatorClipInfo&gt;)">
       <summary>
-        <para>Get a list of AnimatorClipInfo from the Animator.</para>
+        <para>See IAnimatorControllerPlayable.GetCurrentAnimatorClipInfo.</para>
       </summary>
       <param name="layerIndex"></param>
       <param name="clips"></param>
@@ -1304,7 +1304,7 @@
     </member>
     <member name="M:UnityEngine.Animator.SetBool(System.String,System.Boolean)">
       <summary>
-        <para>Sets an Animator bool parameter.</para>
+        <para>See IAnimatorControllerPlayable.SetBool.</para>
       </summary>
       <param name="name"></param>
       <param name="value"></param>
@@ -1312,7 +1312,7 @@
     </member>
     <member name="M:UnityEngine.Animator.SetBool(System.Int32,System.Boolean)">
       <summary>
-        <para>Sets an Animator bool parameter.</para>
+        <para>See IAnimatorControllerPlayable.SetBool.</para>
       </summary>
       <param name="name"></param>
       <param name="value"></param>
@@ -1320,7 +1320,7 @@
     </member>
     <member name="M:UnityEngine.Animator.SetFloat(System.String,System.Single)">
       <summary>
-        <para>Send float values to the Animator to affect transitions.</para>
+        <para>See IAnimatorControllerPlayable.SetFloat.</para>
       </summary>
       <param name="name"></param>
       <param name="value"></param>
@@ -1330,7 +1330,7 @@
     </member>
     <member name="M:UnityEngine.Animator.SetFloat(System.String,System.Single,System.Single,System.Single)">
       <summary>
-        <para>Send float values to the Animator to affect transitions.</para>
+        <para>See IAnimatorControllerPlayable.SetFloat.</para>
       </summary>
       <param name="name"></param>
       <param name="value"></param>
@@ -1340,7 +1340,7 @@
     </member>
     <member name="M:UnityEngine.Animator.SetFloat(System.Int32,System.Single)">
       <summary>
-        <para>Send float values to the Animator to affect transitions.</para>
+        <para>See IAnimatorControllerPlayable.SetFloat.</para>
       </summary>
       <param name="name"></param>
       <param name="value"></param>
@@ -1350,7 +1350,7 @@
     </member>
     <member name="M:UnityEngine.Animator.SetFloat(System.Int32,System.Single,System.Single,System.Single)">
       <summary>
-        <para>Send float values to the Animator to affect transitions.</para>
+        <para>See IAnimatorControllerPlayable.SetFloat.</para>
       </summary>
       <param name="name"></param>
       <param name="value"></param>
@@ -1813,7 +1813,7 @@
     </member>
     <member name="P:UnityEngine.AnimatorTransitionInfo.fullPathHash">
       <summary>
-        <para>The hash name of the Transition.</para>
+        <para>The unique name of the Transition.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.AnimatorTransitionInfo.nameHash">
