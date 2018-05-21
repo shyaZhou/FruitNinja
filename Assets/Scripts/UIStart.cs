@@ -18,7 +18,7 @@ public class UIStart : UIBase {
     {
         base.OnCollisionEnter(collision);
         StartCoroutine("WaitSeconds");
-        GameManager.instance.StartGame();
+        GameManager.instance.StartGame(3);
     }
     IEnumerator WaitSeconds()
     {

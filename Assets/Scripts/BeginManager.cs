@@ -58,14 +58,20 @@ public class BeginManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //List空则返回
         if (rotateObjectList.Count == 0)
         {
-            Debug.Log("Count==0");
             return;
         }
         else {
             for (int i = 0; i < rotateObjectList.Count; i++)
             {
+                //有物体但是未激活
+                if (rotateObjectList[i].activeSelf == false)
+                {
+                    return;
+                }
+                else
                 rotateObjectList[i].transform.Rotate(transform.forward, rotateSpeed * Time.deltaTime);
             }
         }
@@ -112,6 +118,20 @@ public class BeginManager : MonoBehaviour {
         }
         rotateObjectList.Clear();
         uiBaseList.Clear();
+    }
+    public void HideUIAll()
+    {
+        for (int i = 0; i < rotateObjectList.Count; i++)
+        {
+            rotateObjectList[i].transform.parent.gameObject.SetActive(false);
+        }
+    }
+    public void ShowUIAll()
+    {
+        for (int i = 0; i < rotateObjectList.Count; i++)
+        {
+            rotateObjectList[i].transform.parent.gameObject.SetActive(true);
+        }
     }
     void ShowDeBug()
     {

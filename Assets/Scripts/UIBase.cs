@@ -25,7 +25,9 @@ public class UIBase:MonoBehaviour  {
             //}
             //BeginManager.instance.uiBaseList.Remove(this);
             //Destroy(this.transform.parent.gameObject, 1f);
+
             BeginManager.instance.DestroyUIAll();
+            //BeginManager.instance.HideUIAll();
         }
 
 

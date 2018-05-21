@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
+    public GameObject hpOb;
+    public List<GameObject> hpObsList;
     public GameObject spwaner;
     //hp
-    public int hp = 3;
+    public int hp=0;
     public static GameManager instance;
     public GameManager()
     {
@@ -28,10 +30,18 @@ public class GameManager : MonoBehaviour {
             spwaner.SetActive(false);
         }
 	}
-    public void StartGame()
+    public void StartGame(int hpNum)
     {
-        hp = 3;
+        hp = hpNum;
         spwaner.SetActive(true);
+        GameObject hpBar = GameObject.Find("HpBar");   
+        for (int i = 0; i < hp; i++)
+        {
+            hpObsList.Add(Instantiate(hpOb));
+            hpObsList[i].transform.parent = hpBar.transform;
+            hpObsList[i].transform.localPosition = new Vector3((float)i*-1.5f, 0f, 0f);
+        }
+
     }
     private void OnDestroy()
     {

@@ -11,7 +11,13 @@ public class Fruit : MonoBehaviour {
 	void Update () {
         if (transform.position.y <= -10f)
         {
-            Destroy(this.gameObject);
+            if (GameManager.instance.hpObsList.Count > 0)
+            {
+                GameManager.instance.hp--;
+                Destroy(GameManager.instance.hpObsList[GameManager.instance.hpObsList.Count-1]);
+                GameManager.instance.hpObsList.RemoveAt(GameManager.instance.hpObsList.Count - 1);
+                Destroy(this.gameObject);
+            }
         }
 	}
 }
