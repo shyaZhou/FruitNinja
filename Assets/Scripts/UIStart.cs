@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIStart : UIBase {
+public class UIStart : UIBase
+{
+
     public GameObject spwaner;
     protected override void Awake()
     {
@@ -10,7 +12,7 @@ public class UIStart : UIBase {
         text.GetComponent<SpriteRenderer>().sprite = BeginManager.instance.startSprite;
         //spwaner = GameObject.Find("GamePlay").transform.Find("Spawner").gameObject;
     }
-    public UIStart() 
+    public UIStart()
     {
 
     }
@@ -28,12 +30,22 @@ public class UIStart : UIBase {
         base.OnTriggerEnter(other);
         if (other.tag == "Weapon")
         {
-            StartCoroutine("WaitSeconds");
-            GameManager.instance.StartGame(100);
+            GameManager.instance.gameType = GameManager.GameType.Start;
+            WaitSecond(5);
+            GameManager.instance.StartGame(3);
         }
     }
-    IEnumerator WaitSeconds()
+    protected void WaitSecond(int t)
     {
-        yield return new WaitForSeconds(7.0f);
+        StartCoroutine(IWaitSeconds(t));
+    }
+    protected IEnumerator IWaitSeconds(int t)
+    {
+        for (int i = 0; i <= t; i++)
+        {
+            Debug.Log("<color=red>Coroutine</color>");
+            yield return new WaitForSeconds(1);
+        }
+            Debug.Log("<color=red>Done</color>");
     }
 }

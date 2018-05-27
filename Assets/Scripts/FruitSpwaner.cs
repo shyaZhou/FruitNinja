@@ -25,14 +25,17 @@ public class FruitSpwaner : MonoBehaviour {
     }
     // Use this for initialization
     void Start() {
-        StartCoroutine(SpwanFruit());
+        //StartCoroutine(SpwanFruit());        
     }
-
-    // Update is called once per frame
-    void Update() {
+    public void StartSpwan()
+    {
+        StartCoroutine(ISpwanFruit());
+    }
+    private void FixedUpdate()
+    {
 
     }
-    IEnumerator SpwanFruit()
+    IEnumerator ISpwanFruit()
     {
         while (true)
         {

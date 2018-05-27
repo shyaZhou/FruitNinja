@@ -41,4 +41,5 @@ public class UIBase:MonoBehaviour  {
     {
         text = this.transform.parent.Find("text").gameObject;
     }
+
 }

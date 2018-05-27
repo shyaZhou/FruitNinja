@@ -16,8 +16,8 @@ public class Fruit : MonoBehaviour {
                 GameManager.instance.hp--;
                 Destroy(GameManager.instance.hpObsList[GameManager.instance.hpObsList.Count-1]);
                 GameManager.instance.hpObsList.RemoveAt(GameManager.instance.hpObsList.Count - 1);
-                Destroy(this.gameObject);
             }
+                Destroy(this.gameObject);
         }
 	}
 }

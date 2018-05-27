@@ -13,4 +13,16 @@ public class UIExit : UIBase {
         base.Awake();
         text.GetComponent<SpriteRenderer>().sprite = BeginManager.instance.exitSprite;
     }
+    public override void OnTriggerEnter(Collider other)
+    {
+        base.OnTriggerEnter(other);
+        if (other.tag == "Weapon")
+        {
+            
+            Application.Quit();
+        }
+        //IWaitSeconds(3f);
+    }
+
+
 }

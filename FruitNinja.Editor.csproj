@@ -314,10 +314,6 @@
     <None Include="Assets\BLINDED_AM_ME package\Shaders\Intersection_Texture_Rim_Bumped.shader" />
     <None Include="Assets\BLINDED_AM_ME package\Shaders\Portal.shader" />
     <None Include="Assets\BLINDED_AM_ME package\Shaders\burnThrough.shader" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\DielectricFluidShader.shader" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\FluidColorsBlend.shader" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\ParticleShader.shader" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\SimpleFluid.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\Silhouette.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
