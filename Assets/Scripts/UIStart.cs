@@ -30,22 +30,22 @@ public class UIStart : UIBase
         base.OnTriggerEnter(other);
         if (other.tag == "Weapon")
         {
-            GameManager.instance.gameType = GameManager.GameType.Start;
-            WaitSecond(5);
-            GameManager.instance.StartGame(3);
+            
+            WaitSecond(1.5f);
+            
         }
     }
-    protected void WaitSecond(int t)
+    protected void WaitSecond(float t)
     {
-        StartCoroutine(IWaitSeconds(t));
+        GameManager.instance.StartCoroutine(IWaitSeconds(t));
+        //StartCoroutine(IWaitSeconds(t));
     }
-    protected IEnumerator IWaitSeconds(int t)
+    protected IEnumerator IWaitSeconds(float t)
     {
-        for (int i = 0; i <= t; i++)
-        {
-            Debug.Log("<color=red>Coroutine</color>");
-            yield return new WaitForSeconds(1);
-        }
-            Debug.Log("<color=red>Done</color>");
+        
+         yield return new WaitForSeconds(t);
+        
+        GameManager.instance.gameType = GameManager.GameType.Start;
+        GameManager.instance.StartGame(3);
     }
 }
