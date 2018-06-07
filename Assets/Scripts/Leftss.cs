@@ -36,6 +36,7 @@ public class Leftss : MonoBehaviour
     }
     void OnTriggerStay(Collider collider)
     {
+        Debug.Log("Stay");
         //物品抓取
         if (device.GetTouch(SteamVR_Controller.ButtonMask.Trigger))
         {
