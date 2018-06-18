@@ -6,6 +6,9 @@ TagManager:
   tags:
   - UI
   - Weapon
+  - CanGrab
+  - Ground
+  - MoveObj
   layers:
   - Default
   - TransparentFX

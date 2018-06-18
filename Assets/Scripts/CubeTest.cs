@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CubeTest : MonoBehaviour {
     public bool isCollision;
+    public Animation anim;
     private void Awake()
     {
         isCollision = false;
@@ -30,5 +31,12 @@ public class CubeTest : MonoBehaviour {
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(0.5f);
+    }
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.K))
+        {
+            anim.Play();
+        }
     }
 }

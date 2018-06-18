@@ -6,8 +6,7 @@ using UnityEngine;
 public class BeginManager : MonoBehaviour {
     public static BeginManager instance;
     private GameObject[] _fruitPrefab;
-    private object[] _ob;
-    private int _FruitNum;
+    public object[] _ob;
     public GameObject mode1Prefab;
     public GameObject mode2Prefab;
     public GameObject board;
@@ -21,9 +20,9 @@ public class BeginManager : MonoBehaviour {
         if (instance==null)
             instance = this;
         rotateObjectList = new List<GameObject>();
-        _ob = Resources.LoadAll("FruitPrefab");
+        _ob = Resources.LoadAll("FruitPrefab",typeof(GameObject));
+        Debug.Log("ob:" + _ob[1]);
         _fruitPrefab = new GameObject[_ob.Length];
-        _FruitNum = _ob.Length;
         for (int i = 0; i < _ob.Length; i++)
         {
             _fruitPrefab[i] = (GameObject)_ob[i];
@@ -36,8 +35,8 @@ public class BeginManager : MonoBehaviour {
         {
             Debug.LogError("FruitPrefab is Null!!!");
         }
-        mode1Prefab = _fruitPrefab[0];
-        mode2Prefab = _fruitPrefab[1];
+        mode1Prefab = _fruitPrefab[UnityEngine.Random.Range(0, _fruitPrefab.Length)];
+        mode2Prefab = _fruitPrefab[UnityEngine.Random.Range(0, _fruitPrefab.Length)];
         CreateUI<UIStart>("UIStart", mode1Prefab, "Start", Vector3.zero);
         CreateUI<UIExit>("UIExit", mode2Prefab, "Exit", new Vector3(1, 0, 0));
     }
@@ -72,7 +71,7 @@ public class BeginManager : MonoBehaviour {
                     return;
                 }
                 else
-                rotateObjectList[i].transform.Rotate(transform.forward, rotateSpeed * Time.deltaTime);
+                rotateObjectList[i].transform.Rotate(transform.up, rotateSpeed * Time.deltaTime);
             }
         }
         if (Input.GetKeyDown(KeyCode.U))
@@ -95,14 +94,15 @@ public class BeginManager : MonoBehaviour {
         GameObject text = new GameObject("text");
         text.AddComponent<SpriteRenderer>();
         text.transform.parent = parentOb.transform;
-        text.transform.localPosition = Vector3.zero;
+        text.transform.localPosition = new Vector3(0f, -.7f, 0f);
         text.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
         text.transform.Rotate(transform.up, 180f);
-        //旋转的物体
+        //设置并旋转的物体
         rotateObjectList.Add(Instantiate(UIObject));
         rotateObjectList[rotateObjectList.Count - 1].tag = "UI";
         rotateObjectList[rotateObjectList.Count - 1].transform.parent = parentOb.transform;
         rotateObjectList[rotateObjectList.Count - 1].transform.localPosition = Vector3.zero;
+        rotateObjectList[rotateObjectList.Count - 1].GetComponent<Rigidbody>().isKinematic = true;
         //设置<T>并完成绑定
         T uiTemp = rotateObjectList[rotateObjectList.Count - 1].AddComponent<T>();
         uiBaseList.Add(uiTemp);

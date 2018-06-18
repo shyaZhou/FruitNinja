@@ -47,5 +47,7 @@ public class UIStart : UIBase
         
         GameManager.instance.gameType = GameManager.GameType.Start;
         GameManager.instance.StartGame(3);
+        GameManager.instance.StartTime(60f);
+
     }
 }

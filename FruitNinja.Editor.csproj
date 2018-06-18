@@ -278,6 +278,7 @@
   <ItemGroup>
     <Compile Include="Assets\BLINDED_AM_ME package\Editor\MeshColliderPerMaterial_Editor.cs" />
     <Compile Include="Assets\BLINDED_AM_ME package\Editor\Spline3D_Editor.cs" />
+    <Compile Include="Assets\Script\Editor\PatternSystemEditor.cs" />
     <Compile Include="Assets\SteamVR\Editor\SteamVR_Editor.cs" />
     <Compile Include="Assets\SteamVR\Editor\SteamVR_Preferences.cs" />
     <Compile Include="Assets\SteamVR\Editor\SteamVR_RenderModelEditor.cs" />
@@ -314,6 +315,9 @@
     <None Include="Assets\BLINDED_AM_ME package\Shaders\Intersection_Texture_Rim_Bumped.shader" />
     <None Include="Assets\BLINDED_AM_ME package\Shaders\Portal.shader" />
     <None Include="Assets\BLINDED_AM_ME package\Shaders\burnThrough.shader" />
+    <None Include="Assets\Model\Player\AnimationFrame.txt" />
+    <None Include="Assets\Model\Player\Animation_Frame.txt" />
+    <None Include="Assets\Shader\Curved.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\Silhouette.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
@@ -328,6 +332,7 @@
     <None Include="Assets\XWeaponTrail\Model\readme.txt" />
     <None Include="Assets\XWeaponTrail\Shader\xft_displacement_screen.shader" />
     <None Include="Assets\XWeaponTrail\readme.txt" />
+    <None Include="Assets\unity3d.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -219,6 +219,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Axe.cs" />
     <Compile Include="Assets\BLINDED_AM_ME package\Scripts\_2D\AdjustableQuad2D.cs" />
     <Compile Include="Assets\BLINDED_AM_ME package\Scripts\_2D\Parallax2D.cs" />
     <Compile Include="Assets\BLINDED_AM_ME package\Scripts\_2D\Spline2D.cs" />
@@ -240,6 +241,28 @@
     <Compile Include="Assets\BLINDED_AM_ME package\Scripts\PortalView.cs" />
     <Compile Include="Assets\BLINDED_AM_ME package\Scripts\SetDepthTextureMode.cs" />
     <Compile Include="Assets\BLINDED_AM_ME package\Scripts\Spline3D.cs" />
+    <Compile Include="Assets\cube.cs" />
+    <Compile Include="Assets\MoveObjCtrl.cs" />
+    <Compile Include="Assets\Script\AnimationManager.cs" />
+    <Compile Include="Assets\Script\AudioManager.cs" />
+    <Compile Include="Assets\Script\AutoDestory.cs" />
+    <Compile Include="Assets\Script\Board.cs" />
+    <Compile Include="Assets\Script\CameraManager.cs" />
+    <Compile Include="Assets\Script\Coin.cs" />
+    <Compile Include="Assets\Script\FloorSetter.cs" />
+    <Compile Include="Assets\Script\GameAttribute.cs" />
+    <Compile Include="Assets\Script\GameController.cs" />
+    <Compile Include="Assets\Script\Item.cs" />
+    <Compile Include="Assets\Script\iTween.cs" />
+    <Compile Include="Assets\Script\Magnet.cs" />
+    <Compile Include="Assets\Script\MagnetCollider.cs" />
+    <Compile Include="Assets\Script\Multiply.cs" />
+    <Compile Include="Assets\Script\Obstacle.cs" />
+    <Compile Include="Assets\Script\PatternManager.cs" />
+    <Compile Include="Assets\Script\PlayerController.cs" />
+    <Compile Include="Assets\Script\Shoe.cs" />
+    <Compile Include="Assets\Script\Star.cs" />
+    <Compile Include="Assets\Script\UIController.cs" />
     <Compile Include="Assets\Scripts\BeginManager.cs" />
     <Compile Include="Assets\Scripts\CubeTest.cs" />
     <Compile Include="Assets\Scripts\Fruit.cs" />
@@ -387,6 +410,9 @@
     <None Include="Assets\BLINDED_AM_ME package\Shaders\Intersection_Texture_Rim_Bumped.shader" />
     <None Include="Assets\BLINDED_AM_ME package\Shaders\Portal.shader" />
     <None Include="Assets\BLINDED_AM_ME package\Shaders\burnThrough.shader" />
+    <None Include="Assets\Model\Player\AnimationFrame.txt" />
+    <None Include="Assets\Model\Player\Animation_Frame.txt" />
+    <None Include="Assets\Shader\Curved.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\Silhouette.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
@@ -401,6 +427,7 @@
     <None Include="Assets\XWeaponTrail\Model\readme.txt" />
     <None Include="Assets\XWeaponTrail\Shader\xft_displacement_screen.shader" />
     <None Include="Assets\XWeaponTrail\readme.txt" />
+    <None Include="Assets\unity3d.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

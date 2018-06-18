@@ -6,9 +6,10 @@ public class FruitSpwaner : MonoBehaviour {
 
     public GameObject[] fruitPrefab;
     private Object[] ob;
+    public IEnumerator ISpwan;
     private void Awake()
     {
-        ob=Resources.LoadAll("FruitPrefab");
+        ob=Resources.LoadAll("FruitPrefab",typeof(GameObject));
         fruitPrefab = new GameObject[ob.Length];
         for (int i = 0; i < ob.Length; i++)
         {
@@ -29,7 +30,8 @@ public class FruitSpwaner : MonoBehaviour {
     }
     public void StartSpwan()
     {
-        StartCoroutine(ISpwanFruit());
+        ISpwan = ISpwanFruit();
+        StartCoroutine(ISpwan);
     }
     private void FixedUpdate()
     {

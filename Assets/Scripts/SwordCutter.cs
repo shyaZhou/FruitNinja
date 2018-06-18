@@ -7,33 +7,34 @@ public class SwordCutter : MonoBehaviour {
     //public SteamVR_TrackedController controller;
     public SteamVR_TrackedObject trackObj;
     public CubeTest ct;
-	// Use this for initialization
-	//void Start () {
+    public GameObject[] pieces;
+    // Use this for initialization
+    //void Start () {
 
-		
-	//}
-	
-	//void Update(){
 
-	//	if(Input.GetMouseButtonDown(0)){
-	//		RaycastHit hit;
+    //}
 
-	//		if(Physics.Raycast(transform.position, transform.forward, out hit)){
+    //void Update(){
 
-	//			GameObject victim = hit.collider.gameObject;
+    //	if(Input.GetMouseButtonDown(0)){
+    //		RaycastHit hit;
 
-	//			GameObject[] pieces = BLINDED_AM_ME.MeshCut.Cut(victim, transform.position, transform.right, capMaterial);
+    //		if(Physics.Raycast(transform.position, transform.forward, out hit)){
 
-	//			if(!pieces[1].GetComponent<Rigidbody>())
-	//				pieces[1].AddComponent<Rigidbody>();
+    //			GameObject victim = hit.collider.gameObject;
 
-	//			Destroy(pieces[1], 1);
-	//		}
+    //			GameObject[] pieces = BLINDED_AM_ME.MeshCut.Cut(victim, transform.position, transform.right, capMaterial);
 
-	//	}
-	//}
+    //			if(!pieces[1].GetComponent<Rigidbody>())
+    //				pieces[1].AddComponent<Rigidbody>();
 
-	void OnDrawGizmosSelected() {
+    //			Destroy(pieces[1], 1);
+    //		}
+
+    //	}
+    //}
+
+    void OnDrawGizmosSelected() {
 
 		Gizmos.color = Color.green;
 
@@ -60,7 +61,7 @@ public class SwordCutter : MonoBehaviour {
             ps.Play();
             GameObject victim = other.gameObject;
 
-            GameObject[] pieces = BLINDED_AM_ME.MeshCut.Cut(victim, transform.position, transform.right, capMaterial);
+            pieces = BLINDED_AM_ME.MeshCut.Cut(victim, transform.position, transform.right, capMaterial);
 
             //if (!pieces[1].GetComponent<Rigidbody>())
             //{
