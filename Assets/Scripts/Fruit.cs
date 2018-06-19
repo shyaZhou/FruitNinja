@@ -28,10 +28,6 @@ public class Fruit : MonoBehaviour {
         else if (collision.transform.tag == "Weapon")
         {
             isHurt = true;
-            if (collision.transform.GetComponent<SwordCutter>() != null)
-            {
-                collision.transform.GetComponent<SwordCutter>().pieces[0].GetComponent<Fruit>().isHurt = true;
-            }
         }
         Destroy(this.gameObject, 3f);
     }

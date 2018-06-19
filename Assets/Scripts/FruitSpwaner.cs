@@ -7,6 +7,8 @@ public class FruitSpwaner : MonoBehaviour {
     public GameObject[] fruitPrefab;
     private Object[] ob;
     public IEnumerator ISpwan;
+    public Transform spwanDir;
+    public float multiplier = 5f;
     private void Awake()
     {
         ob=Resources.LoadAll("FruitPrefab",typeof(GameObject));
@@ -54,9 +56,7 @@ public class FruitSpwaner : MonoBehaviour {
                 temp = go.GetComponent<Rigidbody>();
             }
             temp.useGravity = true;
-            temp.angularDrag = 0f;
-            float multiplier = 5f;
-            temp.velocity = (transform.forward+transform.up)*multiplier;
+            temp.velocity = (spwanDir.forward)*Random.Range(multiplier,multiplier+1);
             temp.angularVelocity=new Vector3(Random.Range(0f,12f),0f,0f);
 
             yield return new WaitForSeconds(1f);

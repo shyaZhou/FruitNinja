@@ -73,6 +73,10 @@ public class SwordCutter : MonoBehaviour {
             {
                 pieces[1].AddComponent<Rigidbody>();
             }
+            if (pieces[0].GetComponent<Fruit>())
+            {
+                pieces[0].GetComponent<Fruit>().isHurt = true;
+            }
             foreach (var item in pieces)
             {
                 Destroy(item.GetComponent<MeshCollider>());

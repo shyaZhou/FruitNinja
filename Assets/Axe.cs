@@ -20,12 +20,14 @@ public class Axe : MonoBehaviour {
 	void Update () {
         if (axeState == AxeState.INAIR)
         {
+            _anim.enabled = true;
             _anim.SetBool("Axe",true);
             Debug.Log("Play");
         }
         else
         {
             _anim.SetBool("Axe", false);
+            _anim.enabled = false;
         }
 	}
     private void OnCollisionEnter(Collision collision)
